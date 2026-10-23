@@ -1,0 +1,48 @@
+.news-detail-wrapper {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.news-detail-wrapper h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.news-detail-img {
+    margin-bottom: 25px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.news-detail-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.news-detail-text {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+.news-detail-text p {
+    margin-bottom: 15px;
+}
+
+.news-detail-wrapper a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.news-detail-wrapper a:hover {
+    text-decoration: underline;
+}
