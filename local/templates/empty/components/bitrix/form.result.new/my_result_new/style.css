@@ -1,0 +1,143 @@
+.feedback-form-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 80px;
+    background: #2a3f5f;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    font-family: 'Arial', sans-serif;
+    color: #e8eef5;
+}
+
+.form-title {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 20px 0;
+    color: #e8eef5;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.form-description {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #a8b8cc;
+    margin: 0 0 40px 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 400;
+    color: #a8b8cc;
+    font-size: 14px;
+}
+
+.form-group label .req {
+    color: #e88a8a;
+    margin-left: 3px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 0;
+    font-size: 15px;
+    font-family: inherit;
+    box-sizing: border-box;
+    transition: border-color 0.3s, background-color 0.3s;
+    background-color: transparent;
+    color: #e8eef5;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-bottom-color: #6fa8dc;
+    background-color: rgba(111, 168, 220, 0.08);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-group-submit {
+    text-align: center;
+}
+
+.btn-submit {
+    padding: 14px 40px;
+    background: #6fa8dc;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.btn-submit:hover {
+    background: #5d96ca;
+    transform: translateY(-2px);
+}
+
+.form-agreement {
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+    text-align: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Сообщения об ошибках и успехе */
+.form-errors {
+    padding: 15px;
+    margin-bottom: 20px;
+    background: rgba(232, 88, 88, 0.15);
+    color: #e88a8a;
+    border-radius: 8px;
+    border: 1px solid rgba(232, 138, 138, 0.3);
+    font-size: 14px;
+}
+
+.form-success {
+    padding: 20px;
+    background: rgba(111, 168, 220, 0.15);
+    color: #8dc4e6;
+    border-radius: 8px;
+    border: 1px solid rgba(111, 168, 220, 0.3);
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Стилизация стандартных ошибок Битрикса под наш дизайн */
+.form-errors ul {
+    margin: 0;
+    padding-left: 20px;
+}
