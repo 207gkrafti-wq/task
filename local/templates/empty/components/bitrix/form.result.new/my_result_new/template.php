@@ -1,5 +1,6 @@
 <?php
-if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true)die();
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true)
+    die();
 /** @var array $arResult */
 ?>
 
@@ -23,32 +24,30 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true)die();
 
         <div class="feedback-form">
 
-            <div class="form-group">
-                <label for="form_text_3">Ваше имя <span class="req">*</span></label>
-                <input type="text" name="form_text_3" id="form_text_3" placeholder="Иван Иванов">
-            </div>
+            <?php foreach ($arResult["QUESTIONS"] as $value) { ?>
+                <?
+                $caption = $value["CAPTION"];
+                $id = $value['STRUCTURE'][0]["ID"];
+                $required = $value['REQUIRED'];
+                $field_type = $value['STRUCTURE'][0]["FIELD_TYPE"];
+                ?>
 
-            <div class="form-group">
-                <label for="form_text_4">Компания/Должность <span class="req">*</span></label>
-                <input type="text" name="form_text_4" id="form_text_4" placeholder="ООО Ромашка, менеджер">
-            </div>
 
-            <div class="form-group">
-                <label for="form_email_5">Email <span class="req">*</span></label>
-                <input type="email" name="form_email_5" id="form_email_5" placeholder="mail@example.com"
-                    autocomplete="email">
-            </div>
-
-            <div class="form-group">
-                <label for="form_text_6">Номер телефона <span class="req">*</span></label>
-                <input type="text" name="form_text_6" id="form_text_6" placeholder="+7 (999) 123-45-67">
-            </div>
-
-            <div class="form-group">
-                <label for="form_textarea_7">Сообщение</label>
-                <textarea name="form_textarea_7" id="form_textarea_7" rows="4"
-                    placeholder="Введите ваше сообщение..."></textarea>
-            </div>
+                <div class="form-group">
+                    <label for="form_<?= $field_type ?>_<?= $id ?>"><?= $caption ?>
+                        <? if ($required == 'Y') { ?>
+                            <span class="req">*</span>
+                        <? } ?>
+                    </label>
+                    <? if ($field_type == "textarea") { ?>
+                        <textarea name="form_<?= $field_type ?>_<?= $id ?>" id="form_<?= $field_type ?>_<?= $id ?>" rows="4"
+                            placeholder="Введите ваше сообщение..."></textarea>
+                    <? } else { ?>
+                        <input type="<?= $field_type ?>" name="form_<?= $field_type ?>_<?= $id ?>"
+                            id="form_<?= $field_type ?>_<?= $id ?>">
+                    <? } ?> 
+                </div>
+            <?php }; ?>
 
             <div class="form-group form-group-submit">
                 <button type="submit" name="web_form_submit" value="Y" class="btn-submit">
@@ -61,7 +60,14 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true)die();
             </div>
 
         </div>
-
+        <pre>
+            <?
+            foreach ($arResult["QUESTIONS"] as $value) {
+                var_dump($value['STRUCTURE'][0]['ID']);
+            }
+            var_dump($arResult["QUESTIONS"]);
+            ?>
+        </pre>
         <?= $arResult["FORM_FOOTER"] ?>
     <?php endif; ?>
 </div>
