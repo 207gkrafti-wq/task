@@ -16,5 +16,5 @@ $this->setFrameMode(true);
         <?=$arResult["DETAIL_TEXT"] ?: $arResult["PREVIEW_TEXT"];?>
     </div>
 
-    <p style="margin-top: 30px;"><a href="/">&larr; На главную</a></p>
+    <p style="margin-top: 30px;"><a href="/index.php">&larr; Назад</a></p>
 </div>

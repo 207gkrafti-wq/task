@@ -1,17 +1,17 @@
 <?php
 
-require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
-$APPLICATION->SetPageProperty("TITLE", "Новость");
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("TITLE", "Новости детально");
 
 /**
  * @global CMain $APPLICATION
  */
 
-$APPLICATION->SetTitle("Новость");
-?><? $APPLICATION->IncludeComponent(
+$APPLICATION->SetTitle("Новости детально");
+?><?$APPLICATION->IncludeComponent(
 	"bitrix:news.detail",
-	"my_news_detail",
-	array(
+	"",
+	Array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_ELEMENT_CHAIN" => "N",
 		"ADD_SECTIONS_CHAIN" => "Y",
@@ -34,8 +34,8 @@ $APPLICATION->SetTitle("Новость");
 		"DISPLAY_TOP_PAGER" => "N",
 		"ELEMENT_CODE" => "",
 		"ELEMENT_ID" => $_REQUEST["ID"],
-		"FIELD_CODE" => array("", "={[0=>", ",1=>", ",]}", ""),
-		"IBLOCK_ID" => "1",
+		"FIELD_CODE" => array("",""),
+		"IBLOCK_ID" => "4",
 		"IBLOCK_TYPE" => "news",
 		"IBLOCK_URL" => "",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
@@ -46,7 +46,7 @@ $APPLICATION->SetTitle("Новость");
 		"PAGER_SHOW_ALL" => "N",
 		"PAGER_TEMPLATE" => ".default",
 		"PAGER_TITLE" => "Страница",
-		"PROPERTY_CODE" => array("", "={[0=>", ",1=>", ",]}", ""),
+		"PROPERTY_CODE" => array("headline_details","article_news",""),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_CANONICAL_URL" => "N",
 		"SET_LAST_MODIFIED" => "N",
@@ -59,7 +59,6 @@ $APPLICATION->SetTitle("Новость");
 		"USE_PERMISSIONS" => "N",
 		"USE_SHARE" => "N"
 	)
-); ?><br>
-<?php
-require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php");
+);?><?php
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
 ?>

@@ -19,4 +19,5 @@ $this->setFrameMode(true);
             </div>
         </div>
     <?endforeach;?>
+    <p style="margin-top: 30px;"><a href="/index.php">&larr; На главную</a></p>
 </div>
